@@ -2,12 +2,16 @@ import sys
 
 from PyQt5.QtWidgets import *
 
+
 class MDEVWord(QMainWindow):
-    def __int__(self):
-        super().__int__()
+    def __init__(self):
+        super(MDEVWord, self).__init__()
+        self.editor = QTextEdit()
+        self.setCentralWidget(self.editor)
 
-app=QApplication(sys.argv)
 
-window=MDEVWord()
+app = QApplication(sys.argv)
+
+window = MDEVWord()
 window.show()
 sys.exit(app.exec_())
