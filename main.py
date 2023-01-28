@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
 
 
 class MDEVWord(QMainWindow):
@@ -14,7 +15,7 @@ class MDEVWord(QMainWindow):
 
     def create_tool_bar(self):
         tool_bar = QToolBar()
-        undo_action = QAction('Undo', self)
+        undo_action = QAction(QIcon('icon/undo.png'), 'Undo', self)
         undo_action.triggered.connect(self.editor.undo)
         tool_bar.addAction(undo_action)
 
